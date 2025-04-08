@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "Exercicio1.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "Exercicio2.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        },
+        {
+            "type": "java",
+            "name": "App(2)",
+            "request": "launch",
+            "mainClass": "Exercicio3.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        },
+        {
+            "type": "java",
+            "name": "App(3)",
+            "request": "launch",
+            "mainClass": "Exercicio4.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        },
+        {
+            "type": "java",
+            "name": "App(4)",
+            "request": "launch",
+            "mainClass": "Exercicio5.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        },
+        {
+            "type": "java",
+            "name": "App(5)",
+            "request": "launch",
+            "mainClass": "Exercicio6.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        },
+        {
+            "type": "java",
+            "name": "App(6)",
+            "request": "launch",
+            "mainClass": "Exercício7.App",
+            "projectName": "curso_memoria_exercicios_b71ab37f"
+        }
+    ]
+}
