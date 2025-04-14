@@ -6,7 +6,7 @@ import entities.SavingsAccount;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Account acc = new Account(1001, "Alex", 0.0);
+        Account acc = new SavingsAccount(1001, "Alex", 0.0, 0.02);
         BusinessAccount bacc = new BusinessAccount(1003, "Alex", 0.0, 500.0);
         
 

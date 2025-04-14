@@ -6,7 +6,7 @@ import entities.SavingsAccount;
 
 public class App {
     public static void main(String[] args) {
-        Account acc1 = new Account(1001, "Alex", 1000.0);
+        Account acc1 = new SavingsAccount(1001, "Alex", 1000.0, 0.01);
         acc1.withdraw(200.0);
         System.out.println(acc1.getBalance());
         
