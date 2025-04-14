@@ -1,8 +1,10 @@
-package Aula4.SolucaoMuitoRuim.entities;
+package Aula4.SolucaoBoa.model.entities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
+import Aula4.SolucaoBoa.model.exceptions.DomainException;
 
 public class Reservation {
     private Integer roomNumber;
@@ -12,6 +14,9 @@ public class Reservation {
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     
     public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+        if (!checkOut.after(checkIn)) {
+            throw new DomainException("The Check out date must occur after the check in date");
+        }   
         this.roomNumber = roomNumber;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -38,7 +43,14 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
-    public void updateDates(Date checkIn, Date checkOut){
+    public void updateDates(Date checkIn, Date checkOut) {
+        Date now = new Date();
+        System.out.println(sdf.format(now));
+        if (checkIn.before(now) || checkOut.before(now)) {
+            throw new DomainException("Reservation dates must occur in the future");
+        } if (!checkOut.after(checkIn)) {
+            throw new DomainException("The Check out date must occur after the check in date");
+        }   
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
