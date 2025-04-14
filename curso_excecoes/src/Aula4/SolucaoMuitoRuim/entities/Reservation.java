@@ -1,4 +1,4 @@
-package Aula4.entities;
+package Aula4.SolucaoMuitoRuim.entities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,8 +39,8 @@ public class Reservation {
     }
 
     public void updateDates(Date newCheckIn, Date newCheckOut){
-        this.checkIn = checkIn;
-        this.checkOut = checkOut;
+        this.checkIn = newCheckIn;
+        this.checkOut = newCheckOut;
     }
 
     @Override
@@ -51,6 +51,7 @@ public class Reservation {
         + sdf.format(checkIn)
         + ", Check-Out: "
         + sdf.format(checkOut)
+        + ", "
         + duration()
         + " nights.";
     }

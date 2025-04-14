@@ -1,15 +1,15 @@
-package Aula4.SolucaoRuim;
+package Aula4.SolucaoMuitoRuim;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import Aula4.SolucaoRuim.entities.Reservation;
+import Aula4.SolucaoMuitoRuim.entities.Reservation;
 
 public class App {
     public static void main(String[] args) throws ParseException {
-        System.out.println("Solução Ruim");
+        System.out.println("Solução Muito Ruim");
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -35,14 +35,15 @@ public class App {
             System.out.print("Check out date (dd/MM/yyyy): ");
             checkOut = sdf.parse(sc.next());
 
-            String error = reservation.updateDates(checkIn, checkOut);
-            
-            if (error != null) {
-                System.out.println("Error in reservation: " + error);
-            }
-
+            Date now = new Date();
+            if (checkIn.before(now) || checkOut.before(now)) {
+                System.out.println("Error in reservation: Check in and Check out dates must be in the future");
+            } else if (!checkOut.after(checkIn)) {
+                System.out.println("Error in reservation: Check out date must be after check in date");
+            } else {
+            reservation.updateDates(checkIn, checkOut);
             System.out.println("Reservation: " + reservation);
-
+            }
         }
         
     }
