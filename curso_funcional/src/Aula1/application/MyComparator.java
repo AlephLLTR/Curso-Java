@@ -1,6 +1,6 @@
 package Aula1.application;
 
-import Aula1.entities.Product;
+import Global.Product;
 
 public class MyComparator implements java.util.Comparator<Product> {
 

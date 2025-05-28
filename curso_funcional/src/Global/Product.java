@@ -1,6 +1,6 @@
-package Aula1.entities;
+package Global;
 
-public class Product{
+public class Product {
     private String name;
     private Double price;
 
@@ -26,6 +26,22 @@ public class Product{
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public static boolean staticProductPredicate(Product product) {
+        return product.getPrice() >= 100;
+    }
+
+    public boolean nonStaticProductPredicate() {
+        return price >= 100;
+    }
+
+    public static void staticUpdatePrice(Product product) {
+        product.setPrice(product.getPrice() * 1.1);
+    }
+
+    public void nonStaticUpdatePrice() {
+        price *= 1.1;
     }
 
     @Override

@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import Aula1.entities.ComparableProduct;
-import Aula1.entities.Product;
+import Global.Product;
 
 public class App {
     public static void main(String[] args) throws Exception {
